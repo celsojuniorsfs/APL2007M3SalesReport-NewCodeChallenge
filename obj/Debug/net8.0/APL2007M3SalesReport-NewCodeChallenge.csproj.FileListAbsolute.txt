@@ -1,0 +1,14 @@
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\bin\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.exe
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\bin\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.deps.json
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\bin\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.runtimeconfig.json
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\bin\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.dll
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\bin\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.pdb
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\obj\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\obj\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.AssemblyInfoInputs.cache
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\obj\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.AssemblyInfo.cs
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\obj\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.csproj.CoreCompileInputs.cache
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\obj\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.dll
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\obj\Debug\net8.0\refint\APL2007M3SalesReport-NewCodeChallenge.dll
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\obj\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.pdb
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\obj\Debug\net8.0\APL2007M3SalesReport-NewCodeChallenge.genruntimeconfig.cache
+C:\Users\celso\Desktop\SampleApps\APL2007M3SalesReport-NewCodeChallenge\obj\Debug\net8.0\ref\APL2007M3SalesReport-NewCodeChallenge.dll
