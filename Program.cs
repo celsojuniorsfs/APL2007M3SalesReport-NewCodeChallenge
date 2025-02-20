@@ -136,7 +136,7 @@
 
             // display the quarterly sales report
             Console.WriteLine("Quarterly Sales Report");
-            Console.WriteLine("----------------------");
+            Console.WriteLine("──────────────────────");
 
             // sort the quarterly sales by key (quarter)
             var sortedQuarterlySales = quarterlySales.OrderBy(q => q.Key);
@@ -148,10 +148,16 @@
                 string formattedProfitAmount = quarterlyProfit[quarter.Key].ToString("C");
                 string formattedProfitPercentage = quarterlyProfitPercentage[quarter.Key].ToString("F2");
 
-                Console.WriteLine("{0}: Sales: {1}, Profit: {2}, Profit Percentage: {3}%", quarter.Key, formattedSalesAmount, formattedProfitAmount, formattedProfitPercentage);
+                Console.WriteLine("┌───────────────────────────────────────────────────────────────┐");
+                Console.WriteLine("│ {0}: Sales: {1}, Profit: {2}, Profit Percentage: {3}% │", quarter.Key, formattedSalesAmount, formattedProfitAmount, formattedProfitPercentage);
+                Console.WriteLine("└───────────────────────────────────────────────────────────────┘");
 
                 // display the quarterly sales, profit, and profit percentage by department
                 Console.WriteLine("By Department:");
+                Console.WriteLine("┌──────────────────────┬───────────────┬───────────────┬──────────────────────┐");
+                Console.WriteLine("│ {0,-20} │ {1,15} │ {2,15} │ {3,20} │", "Department", "Sales", "Profit", "Profit Percentage");
+                Console.WriteLine("├──────────────────────┼───────────────┼───────────────┼──────────────────────┤");
+
                 var sortedQuarterlySalesByDepartment = quarterlySalesByDepartment[quarter.Key].OrderBy(d => d.Key);
 
                 foreach (KeyValuePair<string, double> department in sortedQuarterlySalesByDepartment)
@@ -160,9 +166,10 @@
                     string formattedDepartmentProfitAmount = quarterlyProfitByDepartment[quarter.Key][department.Key].ToString("C");
                     string formattedDepartmentProfitPercentage = quarterlyProfitPercentageByDepartment[quarter.Key][department.Key].ToString("F2");
 
-                    Console.WriteLine("Department: {0}, Sales: {1}, Profit: {2}, Profit Percentage: {3}%", department.Key, formattedDepartmentSalesAmount, formattedDepartmentProfitAmount, formattedDepartmentProfitPercentage);
+                    Console.WriteLine("│ {0,-20} │ {1,15} │ {2,15} │ {3,20}% │", department.Key, formattedDepartmentSalesAmount, formattedDepartmentProfitAmount, formattedDepartmentProfitPercentage);
                 }
 
+                Console.WriteLine("└──────────────────────┴───────────────┴───────────────┴──────────────────────┘");
                 Console.WriteLine();
             }
         }
