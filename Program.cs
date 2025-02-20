@@ -82,6 +82,9 @@
             Dictionary<string, Dictionary<string, double>> quarterlyProfitByDepartment = new Dictionary<string, Dictionary<string, double>>();
             Dictionary<string, Dictionary<string, double>> quarterlyProfitPercentageByDepartment = new Dictionary<string, Dictionary<string, double>>();
 
+            // create a dictionary to store the top 3 sales orders by quarter
+            Dictionary<string, List<SalesData>> topSalesByQuarter = new Dictionary<string, List<SalesData>>();
+
             // iterate through the sales data
             foreach (SalesData data in salesData)
             {
@@ -132,6 +135,13 @@
                 {
                     quarterlyProfitPercentage.Add(quarter, profitPercentage);
                 }
+
+                // add the sales data to the top sales by quarter
+                if (!topSalesByQuarter.ContainsKey(quarter))
+                {
+                    topSalesByQuarter.Add(quarter, new List<SalesData>());
+                }
+                topSalesByQuarter[quarter].Add(data);
             }
 
             // display the quarterly sales report
@@ -170,6 +180,29 @@
                 }
 
                 Console.WriteLine("└──────────────────────┴───────────────┴───────────────┴──────────────────────┘");
+
+                // display the top 3 sales orders for the quarter
+                Console.WriteLine("Top 3 Sales Orders:");
+                Console.WriteLine("┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬──────────────────────┐");
+                Console.WriteLine("│ {0,-13} │ {1,13} │ {2,13} │ {3,13} │ {4,13} │ {5,20} │", "Product ID", "Quantity", "Unit Price", "Total Sales", "Profit", "Profit Percentage");
+                Console.WriteLine("├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼──────────────────────┤");
+
+                var topSales = topSalesByQuarter[quarter.Key]
+                    .OrderByDescending(s => s.quantitySold * s.unitPrice)
+                    .Take(3)
+                    .OrderByDescending(s => (s.quantitySold * s.unitPrice) - (s.quantitySold * s.baseCost));
+
+                foreach (SalesData topSale in topSales)
+                {
+                    double totalSales = topSale.quantitySold * topSale.unitPrice;
+                    double totalCost = topSale.quantitySold * topSale.baseCost;
+                    double profit = totalSales - totalCost;
+                    double profitPercentage = (profit / totalSales) * 100;
+
+                    Console.WriteLine("│ {0,-13} │ {1,13} │ {2,13:C} │ {3,13:C} │ {4,13:C} │ {5,20:F2}% │", topSale.productID, topSale.quantitySold, topSale.unitPrice, totalSales, profit, profitPercentage);
+                }
+
+                Console.WriteLine("└───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴──────────────────────┘");
                 Console.WriteLine();
             }
         }

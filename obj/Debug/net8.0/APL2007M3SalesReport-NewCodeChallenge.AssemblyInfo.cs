@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APL2007M3SalesReport-NewCodeChallenge")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+469b584bb40ce93431601e42f66b7bd3f3a2f295")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dafcb18919f79011d6f5626f77c5e7a1fdde0ff7")]
 [assembly: System.Reflection.AssemblyProductAttribute("APL2007M3SalesReport-NewCodeChallenge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APL2007M3SalesReport-NewCodeChallenge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
